@@ -24,7 +24,7 @@ export default function AIHelperWidget() {
     setInput("");
 
     try {
-      const res = await axios.post("http://localhost:3000/api/ai-helper/query", {
+      const res = await axios.post("https://path-smart.vercel.app/api/ai-helper/query", {
         page_url: window.location.href,
         user_query: input,
       });
