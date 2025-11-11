@@ -1,0 +1,14 @@
+.main-div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 6px;
+    background: linear-gradient(
+  to right,
+  rgba(0, 0, 0, 0.626) 20%,
+  #ff6600c9 85%,
+  rgba(0, 0, 0, 0.626)
+);
+    color: white;
+    border-bottom: 2px solid #c9c3c0dd;
+}

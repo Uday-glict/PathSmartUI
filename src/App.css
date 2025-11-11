@@ -1,0 +1,89 @@
+.tooltip-bubble {
+  --border-width: 2px;
+  --border-color: #007bff;
+  --arrow-size: 14px;
+  --shadow-size: 8px;
+
+  position: absolute;
+  background: linear-gradient(135deg, #ffffff, #e8f1ff);
+  border: var(--border-width) solid var(--border-color);
+  border-radius: 10px;
+  box-shadow:
+    0 0 20px rgba(0, 123, 255, 0.3),
+    0 4px 25px rgba(0, 123, 255, 0.2);
+  padding: 18px 22px 30px;
+  color: #1a1a1a;
+  max-width: 300px;
+  animation: glow 2s infinite ease-in-out;
+  z-index: 10002;
+}
+
+
+/* 💡 Blue glowing border animation */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.25),
+                0 0 12px rgba(0, 123, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 10px 25px rgba(0, 123, 255, 0.15),
+                0 0 8px rgba(0, 123, 255, 0.35);
+  }
+}
+
+/* 🔽 Bottom-right arrow (under the Next button) */
+.tooltip-bubble::after {
+  content: "";
+  position: absolute;
+  width: var(--arrow-size);
+  height: var(--arrow-size);
+  background: linear-gradient(135deg, #ffffff, #e8f1ff);
+  border: var(--border-width) solid var(--border-color);
+  border-top: 0;
+  border-left: 0;
+  transform: rotate(45deg);
+  bottom: calc(-1 * (var(--arrow-size) / 2 + var(--border-width)));
+  right: 1.4em; /* aligns near Next button */
+  box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3);
+}
+
+/* --- Title --- */
+.tooltip-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #003d80;
+}
+
+/* --- Content --- */
+.tooltip-content {
+  font-size: 0.95rem;
+  color: #333;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+/* --- Button Section --- */
+.tooltip-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tooltip-button {
+  background: linear-gradient(90deg, #007bff, #00a2ff);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.tooltip-button:hover {
+  background: linear-gradient(90deg, #0062cc, #0095ff);
+  transform: translateY(-1px);
+}
