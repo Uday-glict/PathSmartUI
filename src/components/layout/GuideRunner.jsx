@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 // Note: Using fetch instead of axios for simplicity and consistency with the rest of the generated files
-const BASE_URL = "https://path-smart.vercel.app/api";
+const BASE_URL = "https://path-smart.vercel.app/api/admin";
 const GUIDE_ID = 101; // The ID of the guide the user is currently running
 const STORAGE_KEY = `guide_progress_${GUIDE_ID}`; // Unique key for localStorage
 
